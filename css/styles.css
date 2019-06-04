@@ -1,0 +1,782 @@
+
+/*==================================
+
+font-family: 'Noto Sans', sans-serif;
+
+==================================== */
+
+/*=========== TABLE OF CONTENTS ===========
+
+1.  General css (Reset code)
+2. 	Navigation
+3. 	Header
+4. Text ohne Bild
+5. Text auf Bild
+
+===========*/
+
+/*-------------------------------------
+		1.General css (Reset code)
+--------------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+@font-face {
+    font-family: "DWTheAntiquaB";    
+    src: url("../fonts/DWTheAntiquaB-W6SemiBold.woff2") format("woff2"),
+         url("../fonts/DWTheAntiquaB-W6SemiBold.woff") format("woff"),
+         url("../fonts/DWTheAntiquaB-W6SemiBold.ttf") format("truetype"),
+         url("../fonts/DWTheAntiquaB-W6SemiBold.eot") format("embedded-opentype"), 
+         url("../fonts/DWTheAntiquaB-W6SemiBold.otf") format("opentype"),
+         url("../fonts/DWTheAntiquaB-W6SemiBold.svg#DWTheAntiquaB-W6SemiBold") format("svg");
+         font-weight: 100;
+         font-style: normal;  
+}
+@font-face {
+  font-family: 'DWTheAntiquaB-W6SemiBoldItalic';
+  src: url('../fonts/DWTheAntiquaB-W6SemiBoldItalic.eot?#iefix') format('embedded-opentype'),  
+      url('../fonts/DWTheAntiquaB-W6SemiBoldItalic.otf')  format('opentype'),
+	     url('../fonts/DWTheAntiquaB-W6SemiBoldItalic.woff') format('woff'), 
+      url('../fonts/DWTheAntiquaB-W6SemiBoldItalic.ttf')  format('truetype'), 
+      url('../fonts/DWTheAntiquaB-W6SemiBoldItalic.svg#DWTheAntiquaB-W6SemiBoldItalic') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+    /* noto-sans-regular - latin */
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/noto-sans-v8-latin-regular.eot'), /* IE9 Compat Modes */
+       url('../fonts/noto-sans-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/noto-sans-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/noto-sans-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/noto-sans-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('.//fonts/noto-sans-v8-latin-regular.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'NotoSans-Bold';
+  src: url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/NotoSans-Bold.woff') format('woff'), 
+      url('../fonts/NotoSans-Bold.ttf')  format('truetype'), 
+      url('../fonts/NotoSans-Bold.svg#NotoSans-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+    position: relative;
+	font-size:14px;
+	color: #cbd2d8;
+	background: #323c45;
+	font-family: "Noto Sans", sans-serif;
+  /*  max-width:1920px;*/
+    font-weight: 400;
+    margin:0 auto;
+	overflow-x:hidden;
+}
+
+a,a:hover,a:active,a:focus {
+	display:inline-block;
+	text-decoration:none;
+	font-size:13px;
+	padding:0;
+    margin:0;
+}
+
+h1,h2,h3,h4,h5,h6 { 
+	margin: 0;
+	color:#002d5a;
+	text-transform: capitalize;
+    font-family: DWTheAntiquaB;
+    font-size: 26px;
+}
+
+p {
+  margin: 0 0 25px 0;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.56;
+  letter-spacing: normal;   
+  color: #cbd2d8;
+  font-size:18px;
+}
+
+img{	border:none;max-width:100%; height:auto;}
+
+ul{
+	padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+select,input,textarea,button{box-shadow:none;outline:0!important;}
+
+
+html,body{
+    height: 100%;
+    z-index: 2;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+
+  -webkit-transition: opacity 0.3s 0.3s ease; 
+  -moz-transition: opacity 0.3s 0.3s ease; 
+  -ms-transition: opacity 0.3s 0.3s ease; 
+  -o-transition: opacity 0.3s 0.3s ease; 
+  transition: opacity 0.3s 0.3s ease; 
+  opacity: 0;
+}
+/* Quote */
+.quote {
+    font-family: DWTheAntiquaB-W6SemiBoldItalic;
+    color: #ffffff;
+    font-size: 26px;
+    line-height: 1.25;
+    font-weight: normal;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    margin-bottom: 10px;
+    padding: 10px 55px 5px 40px;
+    margin-left: 15px;
+    text-indent: -48px;
+}
+.quote:before {
+    content: '“';
+    font-size: 80px;
+    font-family: sans-serif;
+    font-weight: 600;
+    position: relative;
+    top: 35px;
+    line-height: 0.25;
+    left: -5px;
+}
+.quote i {
+    letter-spacing: 1px;
+    padding-left: 20px;
+    font-style: initial;
+}
+/*=============Style css=========*/
+
+
+/*-------------------------------------
+		2. 	Navigation
+--------------------------------------*/
+.navbar {
+    min-height: 70px;
+}
+.navbar-default {
+    background: transparent;
+}
+nav.navbar {
+background: -moz-linear-gradient(top, rgba(50,60,69,0.8) 0%, rgba(50,60,69,0.79) 1%, rgba(50,60,69,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(50,60,69,0.8) 0%,rgba(50,60,69,0.79) 1%,rgba(50,60,69,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(50,60,69,0.8) 0%,rgba(50,60,69,0.79) 1%,rgba(50,60,69,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc323c45', endColorstr='#00323c45',GradientType=0 ); /* IE6-9 */
+margin-bottom: 20px;
+    border: none;
+}
+
+.head__logo-image {
+    width: 15.625vw;
+    height: 9.375vw;
+}
+.logo_claim {
+    display: block;
+    position: fixed;
+    left: 110px;
+    top: 29px;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  top: 70px;
+  position: fixed;
+  left: 0;
+  /*width: 100%;*/
+  width: calc(100% - 30px);
+  height: 8px;
+  background: #ccc;
+  z-index: 999;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-container {
+    height: 4px;
+    background: #bfc7ce;
+}
+.progress-bar {
+  height: 5px;
+  background: #fff;
+  width: 0%;
+}
+.navbar {
+    min-height: 50px;
+}
+.head__logo-image {
+    width: 44px;
+    height: 25px;
+    top: 12px;
+    position: fixed;
+    left: 12px;
+}
+ .logo_claim {
+    display: none;
+}
+
+.progress-container {
+  top: 50px;
+  height: 4px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.progress-bar {
+  height: 4px;
+}
+.navbar.brightbckgr {
+ /*   background: #fff;*/
+}
+
+svg.darkblue g path#xx{
+stroke: #002D5A;
+   transition: fill 1s linear;
+   fill:#002D5A;  
+}
+
+#mute-video {
+    background-image: url('../icons/dwIconsSoundOn.png');
+    position: fixed;
+    right: 175px;
+    width: 40px;
+    height: 40px;
+}
+#unmute-video {
+    background-image: url('../icons/dwIconsSound.png');
+    position: fixed;
+    right: 175px;
+    width: 40px;
+    height: 40px;
+}
+
+      /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  right: 0;
+  background: rgba(0,150,250,1);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 70px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 14px 35px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: NotoSans-Bold;
+    color: rgb(0,45,90);
+    display: block;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+a.more_link {
+    font-size: 12px;
+    padding-left: 15px;
+    font-family: Noto Sans;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #ffffff;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 5px;
+    right: -9px;
+    margin-left: 50px;
+    font-weight: 100;
+    color: #fff;
+    background: url(../icons/close.png)no-repeat 0 0;
+    height: 40px;
+    width: 40px;
+    background-size: 25px 25px;
+}
+
+.openbtn {
+  position: absolute;
+    top: 0px;
+    right: 15px;
+    font-size: 28px;
+    color: #fff;
+    font-weight: 100;
+    background: url("../icons/sm.png")no-repeat 0 0;
+    height: 40px;
+    width: 40px;
+    background-size: 40px 40px;    
+}
+
+/*-------------------------------------
+		3. 	Header
+--------------------------------------*/
+.header{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	position: relative;
+	background: url(https://www.dw.com/image/45917042_7.jpg)no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 1000px;
+
+}
+
+
+.header:before{
+	position: absolute;
+	content: "";
+	bottom:0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.02+0,1+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.02) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.02) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.02) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+/*header-content*/
+.page-kurztitel {
+    background-color: #0096fa;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: NotoSans-Bold;
+    padding: 3px 8px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+.header-content{
+	margin: -65px 0 0 15px;
+}
+.header-txt{
+  margin-right: auto;
+  margin-left: auto;
+}
+.header h1 {
+	color:#fff;	
+	font-size:40px;
+	text-transform: inherit;
+  font-weight: 100;
+  line-height: 1.1;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.page-header {
+   left: 260px;
+    border-bottom: none;
+    margin: 10px 0 0px;
+}
+.page-author p {
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+}
+.page-author a, .page-author a:link, .page-author a:active, .page-author a:hover, .page-author a:visited {
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.69;
+  letter-spacing: 0.4px;
+  color: #0096fa; 
+}
+.page-date {
+  font-size: 13px;
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.46;
+  letter-spacing: 0.4px;
+  color: #7f8891;
+}
+
+
+
+/*-------------------------------------
+		4. 	Intro
+--------------------------------------*/
+.intro {
+    padding-top: 20px;
+    background: #000000;
+}
+
+.intro p.introtext {
+  font-family: NotoSans-Bold;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin: 0 15px 25px 15px;
+
+}
+
+/*-------------------------------------
+		5.Text ohne Bild css
+--------------------------------------*/
+.onlytxt {
+    background: #323c45;
+    padding-top: 20px;
+}
+.onlytxt h2, .onlytxt h3 {
+    margin: 25px 0;
+    color: #cbd2d8;
+}
+    /* Only Text */
+ .onlytxt .container {
+ /*   width: 345px; */
+}
+
+.onlytxt .container p{
+  font-size: 16px;
+  font-family: Noto Sans;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+  color: #cbd2d8;
+  margin: 0 15px 30px 15px;
+}
+.onlytxt p span{
+    display: inline-block;
+    width: 150px;
+}
+.onlytxt p i{
+    color: #ffdf00;
+    font-size: 18px;
+}
+
+
+
+/*-------------------------------------
+		5.Text auf dem Bils css
+--------------------------------------*/
+
+.imgtxt {
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;  
+}
+
+#imgblock1 {
+  background: url(https://www.dw.com/image/47883346_403.jpg)no-repeat center center fixed; 
+       display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;  
+}
+#imgblock2 {
+   background: url(https://www.dw.com/image/48823819_403.jpg)no-repeat center center fixed;
+   display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;    
+   
+}
+.imgtxt h2, .imgtxt h3 {
+    margin: 75px 0;
+    color: #fff;
+}
+.imgtxt .imgtxtbox{
+    width: 345px;
+    background: rgba(50, 60, 69, 0.7);
+    padding: 21px 30px 25px 30px;
+    margin: 0 auto;
+    margin-bottom: 500px;
+}
+
+
+.imgtxt .imgtxtbox_blue {
+background: rgba(0,99,180,1);
+background: -moz-linear-gradient(left, rgba(0,99,180,1) 0%, rgba(0,162,255,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,99,180,1)), color-stop(100%, rgba(0,162,255,1)));
+background: -webkit-linear-gradient(left, rgba(0,99,180,1) 0%, rgba(0,162,255,1) 100%);
+background: -o-linear-gradient(left, rgba(0,99,180,1) 0%, rgba(0,162,255,1) 100%);
+background: -ms-linear-gradient(left, rgba(0,99,180,1) 0%, rgba(0,162,255,1) 100%);
+background: linear-gradient(to right, rgba(0,99,180,1) 0%, rgba(0,162,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0063b4', endColorstr='#00a2ff', GradientType=1 );
+opacity: 1.0;
+}
+.imgtxt .imgtxtbox p {
+    font-size: 20px;
+    margin: 21px 30px 25px 30px;
+}
+.imgtxt .imgtxtbox:first-child {
+    margin-top: 150px;
+}
+.parallax-content p {
+    color: #fff;
+    margin: 150px 0;    
+}
+
+section img.responsive {
+      
+}
+section .imggallery div.desc {
+    height: auto;
+    padding: 9px auto 25px;
+    background-color: rgb(60, 68, 77);
+    margin: 0 auto 35px;
+}
+section .imggallery div.desc p {
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: Noto Sans;
+    padding: 10px 10px 0 10px;
+    margin: 0 auto 5px;
+    
+}
+section .imggallery div.desc p.imgsource {
+    font-family: Noto Sans;
+    margin: 0 auto 20px;
+}
+/*-------------------------------------
+		6.Text auf dem Video css
+--------------------------------------*/
+
+.videotxt {
+  display: table;
+ /* flex-direction: column;
+  justify-content: center;*/
+  overflow: hidden;
+  position: relative;
+   height: 100%;
+  width: 100%;
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    */
+}
+
+.videotxt-content {
+ /*   position: relative;
+    overflow: hidden;    
+*/
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.videotxt-video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: top;
+    object-fit: cover; 
+}
+
+.videotxt video {
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100% !IMPORTANT;
+   height: auto !IMPORTANT;
+}
+
+.videotxt h2, .videotxt h3 {
+    margin: 75px 0;
+    color: #fff;
+}
+
+.parallax-content p {
+    color: #fff;
+    margin: 150px 0;    
+}
+
+/*-------------------------------------
+		10.ReadingIndicator css
+--------------------------------------*/
+
+nav.side-readingindicator {
+position: fixed;
+right: 0;
+top: 20px;
+bottom: 0;
+height: calc(100% - 20px);
+display: block;
+z-index: 999;
+text-align: center;
+width: 20px;
+background-color: chartreuse;
+}
+
+/*-------------------------------------
+		11.Credits css
+--------------------------------------*/
+.credits h3{
+font-size: 16px;
+color: rgb(228, 232, 235);
+text-transform: uppercase;
+font-family: NotoSans-Bold;
+margin: 20px 15px;
+
+}
+.credits .container p{
+  font-size: 16px;
+  font-family: Noto Sans;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.2;
+  letter-spacing: normal;
+  color: #cbd2d8;
+  margin: 20px 15px;
+}
+.credits .container p span.author{
+font-size: 16px;
+font-family: NotoSans-Bold;
+letter-spacing: 0.5px;
+color: #ffffff;
+}
+/*-------------------------------------
+		12.Footer css
+--------------------------------------*/
+
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 272px;
+  background-color: #3c444d;
+}
+.footer__logo-image {
+    width: 65px;
+    height: 37px;
+    top: 30px;
+    position: absolute;
+    left: 15px;
+}
+footer .sender {
+    top: 95px;
+    position: absolute;
+    left: 15px;   
+    font-size: 13px;
+    line-height: 2.2;
+    margin: 0 15px 0 0;
+    text-align: left;
+}
+footer p.sender  span.author{
+font-size: 13px;
+font-family: NotoSans-Bold;
+letter-spacing: 0.5px;
+color: #ffffff;
+}
+footer #footer_links {
+  position: absolute;
+  height: 50px;
+  width: 345px;
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  top: 216px;
+  left: 15px;
+  padding: 0;
+}
+
+footer #footer_links ul {
+    list-style-type: none;
+    text-align: left;
+}
+footer #footer_links ul li {
+    display: inline;
+    margin-right: 0;
+}
+footer #footer_links ul li:bevore{
+    content: "";
+}
+footer #footer_links ul li a, footer #footer_links ul li a:link, footer #footer_links ul li a:visited, footer #footer_links ul li a:hover {
+  font-family: Noto Sans;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.3px;
+  color: #ffffff;
+}
+
+.footer-copyright {
+  position: absolute;
+  top: 167px;
+  left: 15px;
+}
+.footer-copyright p a, .footer-copyright p a:link, .footer-copyright p a:visited, .footer-copyright p a:hover {
+  font-family: Noto Sans;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.3px;
+  color: #ffffff;
+}
