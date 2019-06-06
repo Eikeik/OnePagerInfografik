@@ -3456,8 +3456,8 @@
 	];
 	var debounce = 500;
 	var tipTimeout = 5000;
-	var ratioMobile = 1.15;
-	var ratioDesktop = 0.95;
+	var ratioMobile = 1.45;
+	var ratioDesktop = 0.65;
 	var dateFormat = "%Y-%m-%d";
 	var timeFormat$1 = "%H:%M";
 	var margin = {
@@ -3496,7 +3496,7 @@
 		tickHeight: 0,
 		widthThreshold: 420,
 		dy: "",
-		textX: 10,
+		textX: 0,
 		textY: 0
 	};
 	var xAxis = {
@@ -3515,11 +3515,11 @@
 		tickTarget: 6,
 		ticksSmall: 4,
 		widthThreshold: 420,
-		dy: 3.7,
+		dy: 1.7,
 		barOffset: 9,
 		tickHeight: 0,
-		textX: 6,
-		textY: 7
+		textX: 1,
+		textY: 0
 	};
 	var barHeight = 40;
 	var barLabelOffset = 6;
@@ -3600,7 +3600,7 @@
 	      return this.width - this.margin.left - this.margin.right;
 	    },
 	    height: function() {
-	      var ratioScale = linear$1().range([300, 900]).domain([this.width * this.ratioMobile, this.width * this.ratioDesktop]);
+	      var ratioScale = linear$1().range([300, 1000]).domain([this.width * this.ratioMobile, this.width * this.ratioDesktop]);
 	      return Math.round(ratioScale(this.width));
 	    },
 	    computedHeight: function() {
@@ -8380,18 +8380,36 @@
 	        tickExit = tick.exit(),
 	        tickEnter = tick.enter().append("g").attr("class", "tick"),
 	        line = tick.select("line"),
-	        text = tick.select("text");
+	        text = tick.select("text"),
+	        // computedWidth = dimensions.computedWidth() / 3.5;
+	   
+
 
 	    path = path.merge(path.enter().insert("path", ".tick")
 	        .attr("class", "domain")
-	        .attr("stroke", "#F1f3f5"))
-	    	.attr("transform", function() { return ("translate(" + left + ",0)"); });
+	        .attr("stroke", "#F1f3f5"));
+	    	// .attr("transform", function() { return ("translate(" + positions + ",0)"); });
 
 	    //hier wird die Achse verschoben
-	    	// .attr("transform", "translate(19,0)");
-	    	// 	  var seriesGroup = node.append('g')
+	    	// .attr("transform", "translate(+50%,0)");
 
-		  
+	    // .attrs({
+	    //   'class': function () {
+	    //     var output = (obj.prefix) + "series_group";
+	    //     if (obj.data.seriesAmount > 1) {
+	    //       // If more than one series append a 'muliple' class so we can target
+	    //       output += " " + (obj.prefix) + "multiple";
+	    //     }
+	    //     return output;
+	    //   },
+	    //   'transform': function () {
+	    //     if (xScaleObj.obj.type === 'ordinal') {
+	    //       // return ("translate(" + (xScale.bandwidth() / 3) + ",0)");
+	    //       //vorher: /2
+	    //        return ("translate(" + (xScale.bandwidth() / 2) + ",0)");
+	    //     }
+	    //   }
+	    // });
 
 	    tick = tick.merge(tickEnter);
 
@@ -8909,7 +8927,7 @@
 	      .attr('y', axisSettings.textY)
 	      .call(wrapText, bandWidth);
 
-	    var xPos = -(bandWidth / 2) - ((scale.step() * dimensions.bands.padding) / 2);
+	    var xPos = -(bandWidth / 5) - ((scale.step() * dimensions.bands.padding) / 2);
 
 	    axisNode.selectAll('line')
 	      .attrs({
@@ -8923,7 +8941,7 @@
 	    var lastTick = axisNode.append('g')
 	      .attrs({
 	        'class': 'tick',
-	        'transform': ("translate(" + (dimensions.tickWidth() + (bandWidth / 2) + ((scale.step() * dimensions.bands.padding) / 2)) + ",0)")
+	        'transform': ("translate(" + (dimensions.tickWidth() + (bandWidth / 5) + ((scale.step() * dimensions.bands.padding) / 2)) + ",0)")
 	      });
 
 	    lastTick.append('line')
@@ -9181,7 +9199,7 @@
 	function repositionTextY(text, dimensions, textX) {
 	  text.attrs({
 	    'transform': ("translate(" + (dimensions.computedWidth() / 9) + ",0)"),
-	    'x': (dimensions.computedWidth() / 9)
+	    'x': -30	
 	  });
 	}
 
@@ -9647,11 +9665,10 @@
 	        }
 	        return output;
 	      },
+ // hier wird die gezeichnete Grafik verschoben
 	      'transform': function () {
 	        if (xScaleObj.obj.type === 'ordinal') {
-	          // return ("translate(" + (xScale.bandwidth() / 3) + ",0)");
-	          //vorher: /2
-	           return ("translate(" + (xScale.bandwidth() / 2) + ",0)");
+	           return ("translate(" + (xScale.bandwidth() / 5) + ",0)");
 	        }
 	      }
 	    });
@@ -9744,7 +9761,7 @@
 	      },
 	      'transform': function () {
 	        if (xScaleObj.obj.type === 'ordinal') {
-	          return ("translate(" + (xScale.bandwidth() / 2) + ",0)");
+	          return ("translate(" + (xScale.bandwidth() / 5) + ",0)");
 	        }
 	      }
 	    });
@@ -9964,7 +9981,7 @@
 	      },
 	      'transform': function () {
 	        if (xScaleObj.obj.type === 'ordinal') {
-	          return ("translate(" + (xScale.bandwidth() / 2) + ",0)");
+	          return ("translate(" + (xScale.bandwidth() / 5) + ",0)");
 	        }
 	      }
 	    });
