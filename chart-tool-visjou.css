@@ -1,0 +1,988 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+@font-face {
+  font-family: 'DW TheAntiquaB';
+  src: url("https://m.dw.com/css-themes/mobile/webfonts/DWTheAntiquaB/DWTheAntiquaB-W6SemiBold.eot");
+  /* IE9 Compat Modes */
+  src: url("https://m.dw.com/css-themes/mobile/webfonts/DWTheAntiquaB/DWTheAntiquaB-W6SemiBold.eot?#iefix") format("embedded-opentype"), url("https://m.dw.com/css-themes/mobile/webfonts/DWTheAntiquaB/DWTheAntiquaB-W6SemiBold.woff2") format("woff2"), url("https://m.dw.com/css-themes/mobile/webfonts/DWTheAntiquaB/DWTheAntiquaB-W6SemiBold.woff") format("woff"), url("https://m.dw.com/css-themes/mobile/webfonts/DWTheAntiquaB/DWTheAntiquaB-W6SemiBold.ttf") format("truetype"), url("https://m.dw.com/css-themes/mobile/webfonts/DWTheAntiquaB/DWTheAntiquaB-W6SemiBold.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
+
+.cs-charttool-init {
+  margin: 0px; }
+
+.cs-bg {
+  fill: none;
+  display: inline-block; }
+
+.cs-graph {
+  position: absolute;
+  width: 100%;
+  height: auto; }
+
+.cs-bar-label {
+  color: #F1F3F5;
+  font-weight: 700; }
+
+.cs-chart_svg {
+  overflow: visible;
+  position: relative;
+  transform: translate(0px, -150px);
+}
+
+.cs-chart {
+  background-color: #323C45;
+  position: relative;
+}
+
+.cs-base64img {
+  display: none; }
+
+
+.cs-chart_title {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+  color: #F1F3F5;
+  font-family: "DW TheAntiquaB";
+  font-size: 28px;
+  line-height: 1.3;
+
+  /*da sonst die Legende rechts der Grafik nicht sichtbar wäre: auskommentiert*/
+  /*overflow: hidden;*/
+  }
+
+  .cs-chart_qualifier {
+  box-sizing: border-box;
+  display: block;
+  padding-top: 0px;
+    padding-top: 1rem;
+  font-family: "Noto Sans";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: 0px;
+  color: #F1F3F5;
+  line-height: 1.3; }
+
+
+  .cs-chart_legend {
+    float: both;
+    margin: 0 auto;
+    max-width: 90px;
+    transform: translate(50%,50%);
+  }
+
+.cs-chart_legend .cs-legend_item {
+  display: inline-block;
+  margin-right: 1em;
+  font-family: "Noto Sans";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.3;
+}
+.cs-legend_item_icon {
+  display: inline-block;
+  vertical-align: sub;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 0.6rem;
+  text-align: center; }
+
+
+
+.cs-chart_legend .cs-legend_item .cs-legend_item_icon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+  border-radius: 0px;
+  width: 5px;
+  margin-right: 12px; }
+
+
+
+.cs-primary .cs-chart_legend .cs-legend_item_0 .cs-legend_item_icon {
+  background: #4b545c; }
+
+.cs-primary .cs-chart_legend .cs-legend_item_1 .cs-legend_item_icon {
+  background: #4b545c; }
+
+.cs-primary .cs-chart_legend .cs-legend_item_2 .cs-legend_item_icon {
+  background: #4b545c; }
+
+.cs-primary .cs-chart_legend .cs-legend_item_3 .cs-legend_item_icon {
+  background: #00A5FF; }
+
+.cs-primary .cs-chart_legend .cs-legend_item_4 .cs-legend_item_icon {
+  background: #00A5FF; }
+
+.cs-alternate .cs-chart_legend .cs-legend_item_0 .cs-legend_item_icon {
+  background: #002D5A; }
+
+.cs-alternate .cs-chart_legend .cs-legend_item_1 .cs-legend_item_icon {
+  background: #00A5FF; }
+
+.cs-alternate .cs-chart_legend .cs-legend_item_2 .cs-legend_item_icon {
+  background: #D44820; }
+
+.cs-alternate .cs-chart_legend .cs-legend_item_3 .cs-legend_item_icon {
+  background: #96BE10; }
+
+.cs-alternate .cs-chart_legend .cs-legend_item_4 .cs-legend_item_icon {
+  background: #BE232D; }
+
+.cs-grayscale .cs-chart_legend .cs-legend_item_0 .cs-legend_item_icon {
+  background: #002D5A; }
+
+.cs-grayscale .cs-chart_legend .cs-legend_item_1 .cs-legend_item_icon {
+  background: #bfc7ce; }
+
+.cs-grayscale .cs-chart_legend .cs-legend_item_2 .cs-legend_item_icon {
+  background: #a1abb4; }
+
+.cs-grayscale .cs-chart_legend .cs-legend_item_3 .cs-legend_item_icon {
+  background: #7f8891; }
+
+.cs-grayscale .cs-chart_legend .cs-legend_item_4 .cs-legend_item_icon {
+  background: #5c666e; }
+
+.cs-axis path {
+  display: none; }
+
+.cs-axis-group {
+  /*transform: translate(0px,0px);*/ }
+
+/*.cs-yAxis{
+  transform: translate(100px,0px);
+}*/
+
+/*.cs-xAxis{
+  transform: translate(0px,600px);
+}*/
+
+
+.cs-yAxis .cs-minor line {
+  /*  stroke: $axis-stroke-color;
+  shape-rendering: crispEdges;*/
+   }
+
+.cs-yAxis .tick:not(.cs-minor) line {
+  /*display: none;*/
+}
+
+.cs-type_bar .cs-xAxis .cs-minor line {
+  /*  stroke: $axis-stroke-color;
+  shape-rendering: crispEdges;*/ }
+
+.cs-type_bar .cs-yAxis g.tick text {
+/*  -webkit-transform: translate(9px, 33px);
+          transform: translate(9px, 33px); */
+}
+
+.cs-axis-group g.tick line {
+  opacity: 0; }
+  .cs-axis-group g.tick line.cs-muted {
+    opacity: 0; }
+
+.cs-yAxis g.tick text {
+  text-anchor: start !important;
+  /*für Balkengrafik muss die Achsenbeschriftung nach untern verrusch, unter dem Balken stehen.. */
+  /* transform: translate(10px,38px);*/
+  /*Dieser move für PDF Export mit 71 Lines gestapelte Balken*/
+  /* transform: translate(4px,13px);*/
+/*  -webkit-transform: translate(10px, 0px);
+          transform: translate(10px, 0px);*/
+           }
+
+
+.cs-axis-group path {
+  shape-rendering: crispEdges;
+  stroke: none;
+  stroke-width: none; }
+
+
+
+.cs-axis-group text {
+  font-family: "Noto Sans";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.3;
+  /*letter-spacing: 0px;*/
+  fill: #f1f3f5; }
+
+
+.cs-yAxis path {
+/*  /*die yAchse sollte lieber als gesamtes mit dem Text, ganz verschoben werden*/
+/*  transform: translateX(calc(22%));
+  -webkit-transform: translateX(calc(22% + 25px));
+  -moz-transform: translateX(calc(22% + 25px));*/
+  
+  shape-rendering: crispEdges;
+ stroke:#4b545c;
+ stroke-width: 2px;
+ display: inline;
+ }
+
+.cs-axis-group .major-tick line {
+  /*  display: inline;
+  stroke: $axis-stroke-color;
+  stroke-width: $axis-stroke-width;*/ }
+
+/*.last-tick-hide {
+  display: none; }
+*/
+/*.cs-axis-group path.domain {
+  display: none; }*/
+
+/* .cs-type_line .cs-yAxis .cs-zero-line {
+  shape-rendering: crispEdges;
+  stroke:#4b545c;
+  stroke-width: 2px;
+ display: inline;
+ transform: translate(20px, 0px);
+}*/
+
+  .cs-type_line .cs-yAxis line{
+/*  stroke-width: 3px;
+  stroke-linecap: square;
+  stroke: #4b545c; */
+  }
+
+.cs-chart_source {
+  position: relative;
+  display: block;
+  font-family: "Noto Sans";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: 0px;
+  /*font-size: 1.3rem;*/
+  font-size: 14px;
+  line-height: 1.3;
+  /*padding-left: 3%;*/
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  padding-right: 2rem;
+  color: #f1f3f5; }
+
+.cs-chart_copyright-text{
+    visibility: hidden;
+  }
+
+.cs-annotation_text, .cs-annotation_highlight-text, .cs-annotation-text-edit {
+  font-family: "Noto Sans";
+  font-weight: normal;
+  font-style: normal;
+  /*font-size: 1.5rem;*/
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 0px;
+  display: block;
+  line-height: 1.3;
+  color: #f1f3f5;
+  }
+  @media only screen and (min-width: 420px) {
+    .cs-annotation_text, .cs-annotation_highlight-text, .cs-annotation-text-edit {
+      width: calc(100% - 100px);
+      display: block; } }
+
+/*.cs-annotation_text, .cs-annotation_highlight-text {
+  
+  /*text-shadow: 1px 1px 0px rgba($color-white, 0.7), -1px -1px 0px rgba($color-white, 0.7), -1px 1px 0px rgba($color-white, 0.7), 1px -1px 0px rgba($color-white, 0.7);*/
+/* @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+    /*text-shadow: 2px 2px 0px rgba($color-white, 0.7), -2px -2px 0px rgba($color-white, 0.7), -2px 2px 0px rgba($color-white, 0.7), 2px -2px 0px rgba($color-white, 0.7);*/
+.annotation-text-editing .cs-annotation_text, .annotation-text-editing .cs-annotation_highlight-text {
+  opacity: 0; }
+
+.cs-annotation-editable-group .cs-brush .selection {
+  shape-rendering: crispEdges;
+  stroke-width: 0;
+  fill: #3B444D; }
+
+.cs-annotation-editable-group .cs-brush .handle {
+  fill: rgba(59, 68, 77, 0.8);
+  stroke-linecap: butt; }
+
+.cs-annotation-editable-group .cs-brush-line .handle {
+  display: none; }
+
+.cs-annotation-editable-group .cs-brush-line .selection {
+  fill-opacity: 0.7; }
+
+.cs-annotation-editable-group .cs-text rect, .cs-annotation-editable-group .cs-pointer rect {
+  fill: #FFFFFF;
+  opacity: 0; }
+
+.cs-annotation-text-input,
+.cs-annotation-text-edit-box,
+.cs-annotation-text-edit {
+  margin: 0;
+  padding: 0;
+  line-height: 1; }
+
+.cs-annotation-text-input {
+  position: absolute;
+  pointer-events: none; }
+
+.cs-annotation-text-edit-box {
+  position: absolute;
+  pointer-events: all;
+  display: inline-block;
+  min-width: 10px;
+  line-height: 0;
+  margin-top: -2px; }
+  .cs-annotation-text-edit-box:focus {
+    outline: none; }
+
+.cs-annotation-text-edit {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #3B444D; }
+  .cs-annotation-text-edit:focus {
+    outline: rgba(59, 68, 77, 0.4) solid 1px; }
+  .cs-annotation-text-edit:hover {
+    cursor: pointer; }
+  .cs-annotation-text-edit:empty:before {
+    content: 'Hier klicken';
+    color: #73808a; }
+  .cs-annotation-text-edit:focus:empty:before {
+    content: 'Tippen…'; }
+
+.cs-pointer-handle {
+  fill: #3B444D; }
+  .cs-pointer-handle:hover {
+    cursor: pointer; }
+
+.cs-pointer-handle_end {
+  opacity: 0; }
+
+.cs-pointer-handle-path, .cs-pointer-path {
+  fill: none; }
+
+#cs-arrow {
+  fill: #00A5FF; }
+
+#cs-arrow-editable {
+  fill: #3B444D; }
+
+.cs-tip_overlay {
+  fill: #FFFFFF;
+  opacity: 0; }
+
+.cs-tip_box {
+  opacity: 0;
+  transition: opacity 0.3s; }
+  .cs-tip_box.cs-active {
+    opacity: 1; }
+
+.cs-tip_rect {
+  fill: none; }
+
+.cs-tip_text {
+  font-family: "Noto Sans";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.3;
+  /*letter-spacing: 0px;*/
+  font-weight: 200;
+  fill: #f1f3f5; }
+
+.cs-tip_text-x {
+  visibility: hidden;
+  font-family: "Noto Sans";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: 0px;
+  font-weight: 700;
+  fill: #002D5A; }
+
+.cs-tip_line-x {
+  stroke-width: 0px;
+  shape-rendering: crispEdges;
+  opacity: 0;
+  pointer-events: none; }
+  .cs-tip_line-x line {
+    stroke-width: 0px;
+    shape-rendering: crispEdges;
+    opacity: 0; }
+
+.cs-tip_line-y {
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  stroke-width: 0;
+  shape-rendering: crispEdges; }
+  .cs-tip_line-y.cs-active {
+    opacity: 0; }
+  .cs-tip_line-y line {
+    stroke-width: 0;
+    shape-rendering: crispEdges; }
+
+.cs-tip_circle-xy {
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none; }
+  .cs-tip_circle-xy.cs-active {
+    opacity: 1; }
+
+.cs-tip .cs-tip_text-group.cs-active,
+.cs-tip .cs-tip_path-circle-group.cs-active,
+.cs-tip .cs-tip_path-circle.cs-active {
+  display: block;
+  opacity: 1; }
+
+.cs-tip .cs-tip_path-circle-group,
+.cs-tip .cs-tip_path-circle {
+  display: none; }
+
+.cs-tip_group text {
+  color: #f1f3f5;
+  text-shadow: none; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .cs-tip_group text {
+      text-shadow: none; } }
+
+/*.cs-tip .cs-tip_circle {
+  stroke: none;
+  stroke-width: 0px; }*/
+
+
+
+.cs-primary .cs-tip .cs-tip_path-circle-2,
+.cs-primary .cs-tip .cs-tip_circle.cs-tip_circle-2,
+.cs-primary .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-2 {
+  fill: #4b545c; }
+
+.cs-primary .cs-tip .cs-tip_path-circle-3,
+.cs-primary .cs-tip .cs-tip_circle.cs-tip_circle-3,
+.cs-primary .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-3 {
+  fill: #4b545c; }
+
+.cs-primary .cs-tip .cs-tip_path-circle-4,
+.cs-primary .cs-tip .cs-tip_circle.cs-tip_circle-4,
+.cs-primary .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-4 {
+  fill: #4b545c; }
+
+.cs-primary .cs-tip .cs-tip_path-circle-0,
+.cs-primary .cs-tip .cs-tip_circle.cs-tip_circle-0,
+.cs-primary .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-0 {
+  fill: #00A5FF; }
+
+.cs-primary .cs-tip .cs-tip_path-circle-1,
+.cs-primary .cs-tip .cs-tip_circle.cs-tip_circle-1,
+.cs-primary .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-1 {
+  fill: #00A5FF; }
+
+
+.cs-alternate .cs-tip .cs-tip_path-circle-0,
+.cs-alternate .cs-tip .cs-tip_circle.cs-tip_circle-0,
+.cs-alternate .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-0 {
+  fill: #be232d; }
+
+.cs-alternate .cs-tip .cs-tip_path-circle-1,
+.cs-alternate .cs-tip .cs-tip_circle.cs-tip_circle-1,
+.cs-alternate .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-1 {
+  fill: #be232d; }
+
+.cs-alternate .cs-tip .cs-tip_path-circle-2,
+.cs-alternate .cs-tip .cs-tip_circle.cs-tip_circle-2,
+.cs-alternate .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-2 {
+  fill: #4b545c; }
+
+.cs-alternate .cs-tip .cs-tip_path-circle-3,
+.cs-alternate .cs-tip .cs-tip_circle.cs-tip_circle-3,
+.cs-alternate .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-3 {
+  fill: #00A5FF; }
+
+.cs-alternate .cs-tip .cs-tip_path-circle-4,
+.cs-alternate .cs-tip .cs-tip_circle.cs-tip_circle-4,
+.cs-alternate .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-4 {
+  fill: #00A5FF; }
+
+.cs-alternate .cs-tip.cs-tip_stacked .cs-tip_path-circle {
+  fill: #00A5FF; }
+
+.cs-grayscale .cs-tip .cs-tip_path-circle-0,
+.cs-grayscale .cs-tip .cs-tip_circle.cs-tip_circle-0,
+.cs-grayscale .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-0 {
+  fill: #a1abb4; }
+
+.cs-grayscale .cs-tip .cs-tip_path-circle-1,
+.cs-grayscale .cs-tip .cs-tip_circle.cs-tip_circle-1,
+.cs-grayscale .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-1 {
+  fill: #a1abb4; }
+
+.cs-grayscale .cs-tip .cs-tip_path-circle-2,
+.cs-grayscale .cs-tip .cs-tip_circle.cs-tip_circle-2,
+.cs-grayscale .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-2 {
+  fill: #a1abb4; }
+
+.cs-grayscale .cs-tip .cs-tip_path-circle-3,
+.cs-grayscale .cs-tip .cs-tip_circle.cs-tip_circle-3,
+.cs-grayscale .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-3 {
+  fill: #a1abb4; }
+
+.cs-grayscale .cs-tip .cs-tip_path-circle-4,
+.cs-grayscale .cs-tip .cs-tip_circle.cs-tip_circle-4,
+.cs-grayscale .cs-tip .cs-tip_circle-xy .cs-tip_circle-xy-4 {
+  fill: #a1abb4; }
+
+.cs-grayscale .cs-tip.cs-tip_stacked .cs-tip_path-circle {
+  fill: #a1abb4; }
+
+.cs-muted,
+.cs-type_scatterplot .cs-series_group .cs-dot.cs-muted {
+  transition: opacity 0.3s;
+  opacity: 0.1; }
+
+.cs-type_scatterplot .cs-series_group .cs-dot.cs-active {
+  transition: opacity 0.3s;
+  opacity: 1; }
+
+.cs-annotations,
+.cs-annotation_range {
+  transition: opacity 0.3s; }
+
+.cs-muted.cs-annotation_range {
+  opacity: 0.075;
+  transition: opacity 0.3s; }
+
+  .cs-primary.cs-type_line .cs-series_group .cs-line{
+    stroke-width:3px;
+  }
+
+.cs-primary.cs-type_line .cs-series_group .cs-line.cs-line-0 {
+  stroke: #00A5FF; }
+
+.cs-primary .cs-chart_legend.cs-chart_legend-line .cs-legend_item_0 .cs-legend_item_icon {
+  background: #00A5FF; }
+
+.cs-primary.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-0 {
+  fill: #00A5FF; }
+
+.cs-primary.cs-type_line .cs-series_group .cs-line.cs-line-1 {
+  stroke: #00A5FF; }
+
+.cs-primary .cs-chart_legend.cs-chart_legend-line .cs-legend_item_1 .cs-legend_item_icon {
+  background: #00A5FF; }
+
+.cs-primary.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-1 {
+  fill: #00A5FF; }
+
+.cs-primary.cs-type_line .cs-series_group .cs-line.cs-line-2 {
+  stroke: #4b545c; }
+
+.cs-primary .cs-chart_legend.cs-chart_legend-line .cs-legend_item_2 .cs-legend_item_icon {
+  background: #4b545c; }
+
+.cs-primary.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-2 {
+  fill: #4b545c; }
+
+.cs-primary.cs-type_line .cs-series_group .cs-line.cs-line-3 {
+  stroke: #4b545c; }
+
+.cs-primary .cs-chart_legend.cs-chart_legend-line .cs-legend_item_3 .cs-legend_item_icon {
+  background: #4b545c; }
+
+.cs-primary.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-3 {
+  fill: #4b545c; }
+
+.cs-primary.cs-type_line .cs-series_group .cs-line.cs-line-4 {
+  stroke: #4b545c; }
+
+.cs-primary .cs-chart_legend.cs-chart_legend-line .cs-legend_item_4 .cs-legend_item_icon {
+  background: #4b545c; }
+
+.cs-primary.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-4 {
+  fill: #4b545c; }
+
+.cs-alternate.cs-type_line .cs-series_group .cs-line.cs-line-0 {
+  stroke: #002D5A; }
+
+.cs-alternate .cs-chart_legend.cs-chart_legend-line .cs-legend_item_0 .cs-legend_item_icon {
+  background: #002D5A; }
+
+.cs-alternate.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-0 {
+  fill: #002D5A; }
+
+.cs-alternate.cs-type_line .cs-series_group .cs-line.cs-line-1 {
+  stroke: #00A5FF; }
+
+.cs-alternate .cs-chart_legend.cs-chart_legend-line .cs-legend_item_1 .cs-legend_item_icon {
+  background: #00A5FF; }
+
+.cs-alternate.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-1 {
+  fill: #00A5FF; }
+
+.cs-alternate.cs-type_line .cs-series_group .cs-line.cs-line-2 {
+  stroke: #D44820; }
+
+.cs-alternate .cs-chart_legend.cs-chart_legend-line .cs-legend_item_2 .cs-legend_item_icon {
+  background: #D44820; }
+
+.cs-alternate.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-2 {
+  fill: #D44820; }
+
+.cs-alternate.cs-type_line .cs-series_group .cs-line.cs-line-3 {
+  stroke: #96BE10; }
+
+.cs-alternate .cs-chart_legend.cs-chart_legend-line .cs-legend_item_3 .cs-legend_item_icon {
+  background: #96BE10; }
+
+.cs-alternate.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-3 {
+  fill: #96BE10; }
+
+.cs-alternate.cs-type_line .cs-series_group .cs-line.cs-line-4 {
+  stroke: #BE232D; }
+
+.cs-alternate .cs-chart_legend.cs-chart_legend-line .cs-legend_item_4 .cs-legend_item_icon {
+  background: #BE232D; }
+
+.cs-alternate.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-4 {
+  fill: #BE232D; }
+
+/*
+  @for $counter from 1 through $series-count-max {
+    .cs-grayscale.cs-type_line .cs-series_group .cs-line.cs-line-2 {
+      stroke: nth( $palette, $pcounter );
+    }
+*/
+.cs-grayscale.cs-type_line .cs-series_group .cs-line.cs-line-0 {
+  stroke: #002D5A; }
+
+.cs-grayscale .cs-chart_legend.cs-chart_legend-line .cs-legend_item_0 .cs-legend_item_icon {
+  background: #002D5A; }
+
+.cs-grayscale.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-0 {
+  fill: #002D5A; }
+
+.cs-grayscale.cs-type_line .cs-series_group .cs-line.cs-line-1 {
+  stroke: #bfc7ce; }
+
+.cs-grayscale .cs-chart_legend.cs-chart_legend-line .cs-legend_item_1 .cs-legend_item_icon {
+  background: #bfc7ce; }
+
+.cs-grayscale.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-1 {
+  fill: #bfc7ce; }
+
+.cs-grayscale.cs-type_line .cs-series_group .cs-line.cs-line-2 {
+  stroke: #a1abb4; }
+
+.cs-grayscale .cs-chart_legend.cs-chart_legend-line .cs-legend_item_2 .cs-legend_item_icon {
+  background: #a1abb4; }
+
+.cs-grayscale.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-2 {
+  fill: #a1abb4; }
+
+.cs-grayscale.cs-type_line .cs-series_group .cs-line.cs-line-3 {
+  stroke: #7f8891; }
+
+.cs-grayscale .cs-chart_legend.cs-chart_legend-line .cs-legend_item_3 .cs-legend_item_icon {
+  background: #7f8891; }
+
+.cs-grayscale.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-3 {
+  fill: #7f8891; }
+
+.cs-grayscale.cs-type_line .cs-series_group .cs-line.cs-line-4 {
+  stroke: #5c666e; }
+
+.cs-grayscale .cs-chart_legend.cs-chart_legend-line .cs-legend_item_4 .cs-legend_item_icon {
+  background: #5c666e; }
+
+.cs-grayscale.cs-type_line .cs-tip .cs-tip_circle.cs-tip_circle-4 {
+  fill: #5c666e; }
+
+.cs-series_group {
+  fill: none; }
+
+.cs-primary.cs-type_area .cs-series_group .cs-fill.cs-fill-0 {
+  fill: #00A5FF; }
+
+.cs-primary.cs-type_area .cs-series_group .cs-fill.cs-fill-1 {
+  fill: #002D5A; }
+
+.cs-primary.cs-type_area .cs-series_group .cs-fill.cs-fill-2 {
+  fill: #EB6E14; }
+
+.cs-primary.cs-type_area .cs-series_group .cs-fill.cs-fill-3 {
+  fill: #96BE00; }
+
+.cs-primary.cs-type_area .cs-series_group .cs-fill.cs-fill-4 {
+  fill: #F0C80F; }
+
+.cs-alternate.cs-type_area .cs-series_group .cs-fill.cs-fill-0 {
+  fill: #002D5A; }
+
+.cs-alternate.cs-type_area .cs-series_group .cs-fill.cs-fill-1 {
+  fill: #00A5FF; }
+
+.cs-alternate.cs-type_area .cs-series_group .cs-fill.cs-fill-2 {
+  fill: #D44820; }
+
+.cs-alternate.cs-type_area .cs-series_group .cs-fill.cs-fill-3 {
+  fill: #96BE10; }
+
+.cs-alternate.cs-type_area .cs-series_group .cs-fill.cs-fill-4 {
+  fill: #BE232D; }
+
+.cs-grayscale.cs-type_area .cs-series_group .cs-fill.cs-fill-0 {
+  fill: #002D5A; }
+
+.cs-grayscale.cs-type_area .cs-series_group .cs-fill.cs-fill-1 {
+  fill: #bfc7ce; }
+
+.cs-grayscale.cs-type_area .cs-series_group .cs-fill.cs-fill-2 {
+  fill: #a1abb4; }
+
+.cs-grayscale.cs-type_area .cs-series_group .cs-fill.cs-fill-3 {
+  fill: #7f8891; }
+
+.cs-grayscale.cs-type_area .cs-series_group .cs-fill.cs-fill-4 {
+  fill: #5c666e; }
+
+.cs-primary.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-0 {
+  stroke: #00A5FF; }
+
+.cs-primary .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_0 .cs-legend_item_icon {
+  background: #00A5FF; }
+
+.cs-primary.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-0 {
+  fill: #00A5FF; }
+
+.cs-primary.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-1 {
+  stroke: #002D5A; }
+
+.cs-primary .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_1 .cs-legend_item_icon {
+  background: #002D5A; }
+
+.cs-primary.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-1 {
+  fill: #002D5A; }
+
+.cs-primary.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-2 {
+  stroke: #EB6E14; }
+
+.cs-primary .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_2 .cs-legend_item_icon {
+  background: #EB6E14; }
+
+.cs-primary.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-2 {
+  fill: #EB6E14; }
+
+.cs-primary.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-3 {
+  stroke: #96BE00; }
+
+.cs-primary .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_3 .cs-legend_item_icon {
+  background: #96BE00; }
+
+.cs-primary.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-3 {
+  fill: #96BE00; }
+
+.cs-primary.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-4 {
+  stroke: #F0C80F; }
+
+.cs-primary .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_4 .cs-legend_item_icon {
+  background: #F0C80F; }
+
+.cs-primary.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-4 {
+  fill: #F0C80F; }
+
+.cs-alternate.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-0 {
+  stroke: #002D5A; }
+
+.cs-alternate .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_0 .cs-legend_item_icon {
+  background: #002D5A; }
+
+.cs-alternate.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-0 {
+  fill: #002D5A; }
+
+.cs-alternate.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-1 {
+  stroke: #00A5FF; }
+
+.cs-alternate .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_1 .cs-legend_item_icon {
+  background: #00A5FF; }
+
+.cs-alternate.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-1 {
+  fill: #00A5FF; }
+
+.cs-alternate.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-2 {
+  stroke: #D44820; }
+
+.cs-alternate .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_2 .cs-legend_item_icon {
+  background: #D44820; }
+
+.cs-alternate.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-2 {
+  fill: #D44820; }
+
+.cs-alternate.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-3 {
+  stroke: #96BE10; }
+
+.cs-alternate .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_3 .cs-legend_item_icon {
+  background: #96BE10; }
+
+.cs-alternate.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-3 {
+  fill: #96BE10; }
+
+.cs-alternate.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-4 {
+  stroke: #BE232D; }
+
+.cs-alternate .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_4 .cs-legend_item_icon {
+  background: #BE232D; }
+
+.cs-alternate.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-4 {
+  fill: #BE232D; }
+
+.cs-grayscale.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-0 {
+  stroke: #002D5A; }
+
+.cs-grayscale .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_0 .cs-legend_item_icon {
+  background: #002D5A; }
+
+.cs-grayscale.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-0 {
+  fill: #002D5A; }
+
+.cs-grayscale.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-1 {
+  stroke: #bfc7ce; }
+
+.cs-grayscale .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_1 .cs-legend_item_icon {
+  background: #bfc7ce; }
+
+.cs-grayscale.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-1 {
+  fill: #bfc7ce; }
+
+.cs-grayscale.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-2 {
+  stroke: #a1abb4; }
+
+.cs-grayscale .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_2 .cs-legend_item_icon {
+  background: #a1abb4; }
+
+.cs-grayscale.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-2 {
+  fill: #a1abb4; }
+
+.cs-grayscale.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-3 {
+  stroke: #7f8891; }
+
+.cs-grayscale .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_3 .cs-legend_item_icon {
+  background: #7f8891; }
+
+.cs-grayscale.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-3 {
+  fill: #7f8891; }
+
+.cs-grayscale.cs-type_multiline .cs-series_group .cs-multiline.cs-multiline-4 {
+  stroke: #5c666e; }
+
+.cs-grayscale .cs-chart_legend.cs-chart_legend-multiline .cs-legend_item_4 .cs-legend_item_icon {
+  background: #5c666e; }
+
+.cs-grayscale.cs-type_multiline .cs-tip .cs-tip_circle.cs-tip_circle-4 {
+  fill: #5c666e; }
+
+
+.cs-type_bar .cs-series_group .cs-bar rect {
+  shape-rendering: crispEdges; }
+
+.cs-bar-label {
+  font-family: 'Noto Sans';
+  font-size: 1.5rem;
+  font-weight: 700;
+  dominant-baseline: middle;
+  color: #002D5A;
+  -webkit-transform: translate(10px, 0);
+          transform: translate(10px, 0); }
+
+.cs-primary.cs-type_bar .cs-series_group .cs-bar-0 rect {
+  fill: #00A5FF; }
+
+.cs-primary.cs-type_bar .cs-series_group .cs-bar-1 rect {
+  fill: #002D5A; }
+
+.cs-primary.cs-type_bar .cs-series_group .cs-bar-2 rect {
+  fill: #EB6E14; }
+
+.cs-primary.cs-type_bar .cs-series_group .cs-bar-3 rect {
+  fill: #96BE00; }
+
+.cs-primary.cs-type_bar .cs-series_group .cs-bar-4 rect {
+  fill: #F0C80F; }
+
+.cs-alternate.cs-type_bar .cs-series_group .cs-bar-0 rect {
+  fill: #002D5A; }
+
+.cs-alternate.cs-type_bar .cs-series_group .cs-bar-1 rect {
+  fill: #00A5FF; }
+
+.cs-alternate.cs-type_bar .cs-series_group .cs-bar-2 rect {
+  fill: #D44820; }
+
+.cs-alternate.cs-type_bar .cs-series_group .cs-bar-3 rect {
+  fill: #96BE10; }
+
+.cs-alternate.cs-type_bar .cs-series_group .cs-bar-4 rect {
+  fill: #BE232D; }
+
+.cs-grayscale.cs-type_bar .cs-series_group .cs-bar-0 rect {
+  fill: #002D5A; }
+
+.cs-grayscale.cs-type_bar .cs-series_group .cs-bar-1 rect {
+  fill: #bfc7ce; }
+
+.cs-grayscale.cs-type_bar .cs-series_group .cs-bar-2 rect {
+  fill: #a1abb4; }
+
+.cs-grayscale.cs-type_bar .cs-series_group .cs-bar-3 rect {
+  fill: #7f8891; }
+
+.cs-grayscale.cs-type_bar .cs-series_group .cs-bar-4 rect {
+  fill: #5c666e; }
+
+.cs-primary.cs-type_column .cs-series_group .cs-series-0 .cs-column-0 rect {
+  fill: #00A5FF; }
+
+.cs-primary.cs-type_column .cs-series_group .cs-series-1 .cs-column-1 rect {
+  fill: #00A5FF; }
+
+.cs-primary.cs-type_column .cs-series_group .cs-series-2 .cs-column-2 rect {
+  fill: #00A5FF; }
+
+.cs-primary.cs-type_column .cs-series_group .cs-series-3 .cs-column-3 rect {
+  fill: #00A5FF; }
+
+.cs-primary.cs-type_column .cs-series_group .cs-series-4 .cs-column-4 rect {
+  fill: #00A5FF; }
+
+.cs-alternate.cs-type_column .cs-series_group .cs-series-0 .cs-column-0 rect {
+  fill: #00A5FF; }
+
+.cs-alternate.cs-type_column .cs-series_group .cs-series-1 .cs-column-1 rect {
+  fill: #00A5FF; }
+
+.cs-alternate.cs-type_column .cs-series_group .cs-series-2 .cs-column-2 rect {
+  fill: #00A5FF; }
+
+.cs-alternate.cs-type_column .cs-series_group .cs-series-3 .cs-column-3 rect {
+  fill: #00A5FF; }
+
+.cs-alternate.cs-type_column .cs-series_group .cs-series-4 .cs-column-4 rect {
+  fill: #00A5FF; }
+
+.cs-grayscale.cs-type_column .cs-series_group .cs-series-0 .cs-column-0 rect {
+  fill: #00A5FF; }
+
+.cs-grayscale.cs-type_column .cs-series_group .cs-series-1 .cs-column-1 rect {
+  fill: #00A5FF; }
+
+.cs-grayscale.cs-type_column .cs-series_group .cs-series-2 .cs-column-2 rect {
+  fill: #00A5FF; }
+
+.cs-grayscale.cs-type_column .cs-series_group .cs-series-3 .cs-column-3 rect {
+  fill: #00A5FF; }
+
+.cs-grayscale.cs-type_column .cs-series_group .cs-series-4 .cs-column-4 rect {
+  fill: #00A5FF; }
+
